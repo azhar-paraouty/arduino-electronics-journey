@@ -22,6 +22,7 @@ Throughout this project, I will be programming the Arduino using the 'Arduino ID
 | 02      | [Active Buzzer](#02--active-buzzer) |
 | 03      | [Controlling an LED with a Button](#03--controlling-an-led-with-a-button) |
 | 04      | [Controlling a Relay](#04--controlling-a-relay) |
+| 05      | [Serial Port](#05--serial-port) |
 
 ---
 
@@ -175,6 +176,45 @@ void loop()                     // Repeatedly switch the Relay's path
 ### ⚠️ Challenges
 - At first, it was hard to identify the pins of the relay. Each of the 5 pins serve a specific purpose and hence is important to distinguish between Normally Opened (NO), Normally Closed, Common, and Coil pins.
 - Also, I was NOT able to use a Transistor and a Diode to make the circuit 'safer'.
+
+---
+
+# 05 – Serial Port
+
+### Objective
+Controlling an LED via data (1 or 0) received from PC.
+
+### Components Used
+- Arduino MEGA 2560
+- `Keyboard` and `Screen Monitor`
+- USB Cable 
+- 220 Ω Resistor 
+- LED 
+- Breadboard 
+- Jumper Wires 
+
+### Excerpt Arduino Code
+```arduino
+if(Serial.available() > 0) {
+  receivedValue = Serial.read();  // Store the received data (1 | 0) in the variable
+
+  if(receivedValue == '1') {      // If User types 1 on their PC ...
+    digitalWrite(ledpin, HIGH);   // ... light the LED ON
+    Serial.println("LED:ON");
+  }
+
+  if(receivedValue == '0') {      // If User types 0 on their PC ...
+    digitalWrite(ledpin, LOW);    // ... turn the LED OFF
+    Serial.println("LED:OFF");
+  }
+}
+```
+
+[View Full Source Code](mini_projects/05_serial_port/05_code.ino)
+
+### Serial Monitor conmmand line
+
+![Circuit Photo of PC-Controlled LED](mini_projects/05_serial_port/05_circuit.jpeg)
 
 ---
 
