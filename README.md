@@ -23,6 +23,7 @@ Throughout this project, I will be programming the Arduino using the 'Arduino ID
 | 03      | [Controlling an LED with a Button](#03--controlling-an-led-with-a-button) |
 | 04      | [Controlling a Relay](#04--controlling-a-relay) |
 | 05      | [Serial Port](#05--serial-port) |
+| 06      | [LED Flowing Lights](#06--led-flowing-lights) |
 
 ---
 
