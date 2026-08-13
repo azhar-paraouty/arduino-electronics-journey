@@ -218,4 +218,43 @@ if(Serial.available() > 0) {
 
 ---
 
+# 06 – LED Flowing Lights
+
+### Objective
+Build a `parallel` circuit of alternating LEDs (between ON/OFF).
+
+### Components Used
+- Arduino MEGA 2560
+- USB Cable 
+- **4** * 220 Ω Resistor 
+- **4** * LED 
+- Breadboard
+- Jumper Wires
+
+### Excerpt Arduino Code
+```arduino
+void setup() {
+  unsigned char ledPin;    // Variable used to represent LED pins 6-9.
+
+  // Configure digital pins 6, 7, 8, and 9 as OUTPUT pins.
+  for (ledPin = 6; ledPin <= 9; ledPin++) {
+    pinMode(ledPin, OUTPUT);
+  }
+}
+```
+
+[View Full Source Code](mini_projects/06_led_flowing_lights/06_code.ino)
+
+### Circuit
+
+![Circuit Photo of LEDs](mini_projects/06_flowing_lights/06_circuit.jpeg)
+
+### ⚠️ Challenges
+
+- The `Red` LED would not light ON, no matter what.
+- I suspected that the `resistor` was faulty, and hence used a multi-meter to check.
+- Nevertheless, even if 1 component was faulty, the rest of the circuit was working.
+
+---
+
 _More such projects will be added as I continue exploring the world of electronics._
