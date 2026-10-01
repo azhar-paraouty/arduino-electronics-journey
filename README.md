@@ -248,13 +248,44 @@ void setup() {
 
 ### Circuit
 
-![Circuit Photo of LEDs](mini_projects/06_flowing_lights/06_circuit.jpeg)
+![Circuit Photo of LEDs](mini_projects/06_led_flowing_lights/06_circuit.jpeg)
 
 ### ⚠️ Challenges
 
 - The `Red` LED would not light ON, no matter what.
 - I suspected that the `resistor` was faulty, and hence used a multi-meter to check.
 - Nevertheless, even if 1 component was faulty, the rest of the circuit was working.
+
+---
+
+# 07 – LED 7-Segment Display (x4 Digits)
+
+### Objective
+Build a **4-digit 7-segment** display using multiplexing, allowing the Arduino to display numerical values across all four digits.
+
+### Components Used
+- Arduino MEGA 2560
+- USB Cable 
+- **1** * 10 kΩ Potentiometer 
+- **8** * 220 Ω Resistor 
+- LED Bar (4-Digit 7-Segment Display)
+- Breadboard
+- Jumper Wires
+
+### Excerpt Arduino Code
+```arduino
+// Read the potentiometer
+int potValue = analogRead(A0);
+
+// Convert 0-1023 into 0-9999
+int number = map(potValue, 0, 1023, 0, 9999);
+```
+
+[View Full Source Code](mini_projects/07_led_7segment_display/07_code.ino)
+
+### Circuit
+
+![Circuit Photo of LEDs](mini_projects/07_led_7segment_display/07_circuit.jpeg)
 
 ---
 
