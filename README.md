@@ -24,6 +24,7 @@ Throughout this project, I will be programming the Arduino using the 'Arduino ID
 | 04      | [Controlling a Relay](#04--controlling-a-relay) |
 | 05      | [Serial Port](#05--serial-port) |
 | 06      | [LED Flowing Lights](#06--led-flowing-lights) |
+| 07      | [4-Digit 7-Segment Display](#07--4-digit-7-segment-display) |
 
 ---
 
@@ -258,7 +259,7 @@ void setup() {
 
 ---
 
-# 07 – LED 7-Segment Display (x4 Digits)
+# 07 – 4-Digit 7-Segment Display
 
 ### Objective
 Build a **4-digit 7-segment** display using multiplexing, allowing the Arduino to display numerical values across all four digits.
